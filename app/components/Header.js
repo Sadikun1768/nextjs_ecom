@@ -5,9 +5,9 @@ import HeaderMenu from './HeaderMenu'
 
 export default function Header() {
   return (
-<header className='bg-cyan-950 py-2 border border-amber-300'>
+<header className='border border-amber-300'>
 
-     <Container className='flex items-center justify-between'>
+     <Container className='flex items-center justify-between bg-cyan-950'>
 
        <Logo />
 

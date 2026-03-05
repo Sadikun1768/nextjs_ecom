@@ -7,7 +7,7 @@ export default function Container({ children, className= "" }) {
     <div className={`max-w-screen-xl mx-auto px-4 ${className} `}>
     
    
- {children}
+      {children}
 
 
     </div>
