@@ -2,6 +2,7 @@ import React from 'react'
 import Container from './Container'
 import Logo from './Logo'
 import HeaderMenu from './HeaderMenu'
+import SearchBar from './SearchBar'
 
 export default function Header() {
   return (
@@ -14,7 +15,7 @@ export default function Header() {
        <HeaderMenu />
 
     <div className='text-white'>
-      Others
+      <SearchBar />
     </div>
 
 
