@@ -1,17 +1,13 @@
 import React from 'react'
 import Container from '../components/Container'
-
+import ProductCard from '../components/ProductCard'
 export default function Product() {
   return (
-     <Container>
+    <Container>
      <div className="mt-4">
-        
-      <h2>Product Page</h2>
-        
-        
+          <ProductCard />
     </div>
-     
-     </Container>
+   </Container>
     
   )
 }

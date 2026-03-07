@@ -18,7 +18,7 @@ export default function Logo({ children, className= "" })  {
       height={40}
     />  
   
-       <span className='font-semibold hover:text-amber-500 p-2 text-amber-50'>Ecomerce</span>
+       <span className='font-semibold hover:text-amber-500 p-2 text-shadow-black'>Ecomerce</span>
 
     </div>
   )
