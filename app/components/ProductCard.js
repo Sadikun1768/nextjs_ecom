@@ -1,12 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
-import Button from './Button';
+import Button from './Button'
 
 
 function ProductCard() {
     return (
         <div className='grid grid-cols-4 gap-5 mt-2 p-4'>
                  <h4 className='col-span-4 flex text-center justify-center font-bold'>Show All Fruits</h4>
+           
+           
+           
             <div className='border border-black rounded-sm shadow-md'>
 
                 <div>
@@ -226,7 +229,7 @@ function ProductCard() {
             </div>
 
           <div className='col-span-4 flex justify-center'>
-            <button className='bg-cyan-600 text-white rounded-lg p-4'>View More</button>
+            <button className='bg-cyan-600 text-white rounded-lg hover:bg-blue-950 transition-colors duration-200 p-4'>View More</button>
           </div>
         </div>
           
