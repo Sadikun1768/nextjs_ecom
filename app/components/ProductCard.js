@@ -3,13 +3,22 @@ import Image from 'next/image'
 import Button from './Button'
 import products from '@/data/product'
 
+
+
+
 function ProductCard() {
     return (
         <div className='grid grid-cols-4 gap-5 mt-2 p-4'>
             <h4 className='col-span-4 flex text-center justify-center font-bold'>Show All Fruits</h4>
 
+
+
             {products.map((product) => (
-                <div key={product.id} className='border border-black rounded-sm'>
+                <div key={product.id} className='relative border border-black rounded-sm'>
+                     <button
+                            className="absolute top-0 start-0 translate-middle-y bg-white text-dark-red rounded-circle p-2 m-3 shadow">
+                            <i className="fa-solid fa-eye"></i>
+                        </button>
                     <Image
                         className='px-6 h-64 object-cover'
                         src={product.image}
@@ -17,10 +26,13 @@ function ProductCard() {
                         width={300}
                         height={200}
                     />
-                    <div>
-                        <p className="bg-amber-200 text-yellow-500 flex justify-between px-3">★ 0.0 / 5<span>{product.rating}</span></p>
+                    <div className=''>
+                       
+
+
+                        <p className="bg-cyan-100 text-yellow-500 flex justify-between px-3">★ 0.0 / 5<span>{product.rating}</span></p>
                         <h4 className="text-base px-2 my-2">{product.name}</h4>
-                        <p className='px-2'>{product.sku} <span className='font-bold'>Code:217</span></p>
+                        <p className='px-2'><span className='font-bold'>{product.sku}</span></p>
                         <p className='text-center gap-3'>
                             <span className='font-bold line-through text-red-600 px-2'>{product.oldprice}Tk</span>
                             <span className='font-bold px-2'>{product.price}Tk</span>
