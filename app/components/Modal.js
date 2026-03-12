@@ -19,8 +19,17 @@ export default function SimpleModal() {
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white rounded-lg p-6 w-96 relative">
-            <h2 className="text-xl font-bold mb-4">Modal Title</h2>
-            <p className="mb-4">This is a simple modal without ShadCN UI.</p>
+            <h2 className="text-xl font-bold mb-4">Order Now</h2>
+            <p className="bg-black text-white mt-4">অর্ডার করতে চাইলে আপনার নাম,মোবাইল,ঠিকানা দিয়ে অর্ডার কনফার্ম বাটনে ক্লিক করুন।</p>
+            <div className='rounded p-5 m-2 w-full' >
+              <input type="text" className="rounded p-3 mt-2 w-full" placeholder="Please Enter Your Name" />
+           </div>
+            <div className='rounded p-5 m-2 w-full' >
+              <input type="text" className="rounded p-3 mt-2 w-full" placeholder="Please Enter Your Mobile Number" />
+           </div>
+            <div className='rounded p-5 m-2 w-full' >
+              <input type="text" className="rounded p-3 mt-2 w-full" placeholder="Please Enter Your Adress Here" />
+           </div>
 
             <div className="flex justify-end gap-2">
               <button
@@ -32,7 +41,7 @@ export default function SimpleModal() {
               <button
                 className="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600"
                 onClick={() => {
-                  alert("Action!");
+                  alert("Sir Apni ki order korte cassen!");
                   setIsOpen(false);
                 }}
               >
@@ -47,8 +56,10 @@ export default function SimpleModal() {
             >
               ✕
             </button>
+
           </div>
         </div>
+
       )}
     </div>
   );
