@@ -5,6 +5,7 @@ import ProductCard from "./components/ProductCard";
 import SwiperComponent from "./components/SwiperComponent";
 import SwiperTwoComponent from "./components/SwiperTwo";
 
+
 export default function Home() {
   return (
 
@@ -25,6 +26,8 @@ export default function Home() {
        
       </div>
 
+
+   
 
     </Container>
   );

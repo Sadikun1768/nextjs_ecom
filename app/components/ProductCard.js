@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Button from './Button'
 import products from '@/data/product'
 
 
@@ -27,9 +26,6 @@ function ProductCard() {
                         height={200}
                     />
                     <div className=''>
-                       
-
-
                         <p className="bg-cyan-100 text-yellow-500 flex justify-between px-3">★ 0.0 / 5<span>{product.rating}</span></p>
                         <h4 className="text-base px-2 my-2">{product.name}</h4>
                         <p className='px-2'><span className='font-bold'>{product.sku}</span></p>
@@ -40,19 +36,22 @@ function ProductCard() {
                         </p>
                     </div>
 
-
                     <div className='mx-2 py-2'>
-                        <button className='bg-blue-950 text-amber-100 rounded-none p-2 hover:bg-emerald-950 hover:text-white w-full px-3 my-3'>Order Now</button>
+                        <button className='bg-blue-950 text-amber-100 rounded-none p-2 hover:bg-emerald-950 hover:text-white w-full px-3 my-3'>
+                            Order Now           
+                       </button>
                     </div>
                 </div>
+
             ))}
 
 
 
             <div className='col-span-4 flex justify-center'>
-                <button className='bg-cyan-600 text-white rounded-lg hover:bg-blue-950 transition-colors duration-200 p-4'>View More</button>
+                <button className='bg-cyan-600 text-white rounded-lg hover:bg-blue-950 transition-colors duration-200 p-4'>View More </button>
             </div>
         </div>
+
 
     )
 }
