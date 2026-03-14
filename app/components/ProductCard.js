@@ -1,23 +1,30 @@
 import React from 'react'
 import Image from 'next/image'
 import products from '@/data/product'
-
+import Modal from '../components/Modal'
+import EyeModal from './EyeModal'
 
 
 
 function ProductCard() {
     return (
-        <div className='grid grid-cols-4 gap-5 mt-2 p-4'>
+        <div className='grid grid-cols-4 gap-3 mt-2 p-2'>
             <h4 className='col-span-4 flex text-center justify-center font-bold'>Show All Fruits</h4>
 
 
 
             {products.map((product) => (
                 <div key={product.id} className='relative border border-black rounded-sm'>
-                     <button
-                            className="absolute top-0 start-0 translate-middle-y bg-white text-dark-red rounded-circle p-2 m-3 shadow">
-                            <i className="fa-solid fa-eye"></i>
-                        </button>
+
+                    <EyeModal
+                        trigger={{
+                            label: <i className="fa-solid fa-eye"></i>,
+                            className: "eye-icon position-absolute top-0 start-0 translate-middle-y bg-info rounded-circle p-2 m-3 shadow"
+                        }}
+                        product={product}
+                    />
+
+
                     <Image
                         className='px-6 h-64 object-cover'
                         src={product.image}
@@ -37,10 +44,16 @@ function ProductCard() {
                     </div>
 
                     <div className='mx-2 py-2'>
-                        <button className='bg-blue-950 text-amber-100 rounded-none p-2 hover:bg-emerald-950 hover:text-white w-full px-3 my-3'>
-                            Order Now           
-                       </button>
+                        <Modal
+                            trigger={{
+                                label: "Order Now",
+                                className: "bg-blue-950 text-amber-100 p-2 w-full hover:bg-emerald-950 hover:text-white"
+                            }}
+                            product={product}
+
+                        />
                     </div>
+
                 </div>
 
             ))}
