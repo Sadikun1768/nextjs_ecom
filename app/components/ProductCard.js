@@ -48,7 +48,7 @@ function ProductCard() {
                         </p>
                     </div>
 
-                    {/* <div className='mx-2 py-2'>
+                     <div className='mx-2 py-2'>
                         <Modal
                             trigger={{
                                 label: "addToCart",
@@ -57,8 +57,8 @@ function ProductCard() {
                             product={product}
 
                         />
-                    </div> */}
-
+                    </div> 
+{/* 
                     <div className='mx-2 py-2'>
                         <button
                             onClick={() => addToCart(product)}
@@ -66,7 +66,7 @@ function ProductCard() {
                         >
                             Add To Cart
                         </button>
-                    </div>
+                    </div> */}
 
 
                 </div>

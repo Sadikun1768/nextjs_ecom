@@ -10,10 +10,10 @@ export default function CartPage(){
     return (
         <Container>
             <div className='mt-5'>
-                <h3>I am Cart Page dear</h3>
+                <h3 className='my-5 bg-blue-950 text-amber-50 p-2'>Cart List</h3>
                 {cart.length === 0 ?(
                     <p>cart is empty</p>
-                ): (
+                ) : (
                     <ul>
                         {cart.map((item, i) => (
                             <li key={i}>{item.name}- {item.price}</li>

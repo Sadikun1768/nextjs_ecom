@@ -1,14 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Image from "next/image";
+import { CartContext } from "../context/CartContext";
 
 export default function SimpleModal({
   trigger = { label: "Open Modal", className: "btn" },
   product,
 }) {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { addToCart } =useContext(CartContext);
   return (
     <div className="p-2">
       <button
@@ -148,7 +149,7 @@ export default function SimpleModal({
               <button
                 className="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600"
                 onClick={() => {
-                  alert("Sir Apni ki order korte cassen!");
+                  addToCart(product);
                   setIsOpen(false);
                 }}
               >
@@ -159,7 +160,8 @@ export default function SimpleModal({
             {/* close button */}
             <button
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-              onClick={() => setIsOpen(false)}
+              onClick={() => 
+                setIsOpen(false)}
             >
               ✕
             </button>
