@@ -1,17 +1,22 @@
-import React from 'react'
+"use client";
+import React, { useContext } from 'react'
 import Image from 'next/image'
 import products from '@/data/product'
 import Modal from '../components/Modal'
 import EyeModal from './EyeModal'
+import { CartContext } from '../context/CartContext'
 
 
 
 function ProductCard() {
+
+    const { addToCart } = useContext(CartContext);
+
+
+
     return (
         <div className='grid grid-cols-4 gap-3 mt-2 p-2'>
             <h4 className='col-span-4 flex text-center justify-center font-bold'>Show All Fruits</h4>
-
-
 
             {products.map((product) => (
                 <div key={product.id} className='relative border border-black rounded-sm'>
@@ -43,16 +48,26 @@ function ProductCard() {
                         </p>
                     </div>
 
-                    <div className='mx-2 py-2'>
+                    {/* <div className='mx-2 py-2'>
                         <Modal
                             trigger={{
-                                label: "Order Now",
-                                className: "bg-blue-950 text-amber-100 p-2 w-full hover:bg-emerald-950 hover:text-white"
+                                label: "addToCart",
+                                className: "bg-blue-950 text-white p-2 w-full hover:bg-white hover:text-black"
                             }}
                             product={product}
 
                         />
+                    </div> */}
+
+                    <div className='mx-2 py-2'>
+                        <button
+                            onClick={() => addToCart(product)}
+                            className="bg-blue-950 text-white p-2 w-full hover:bg-white hover:text-black"
+                        >
+                            Add To Cart
+                        </button>
                     </div>
+
 
                 </div>
 

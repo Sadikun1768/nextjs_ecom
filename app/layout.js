@@ -2,8 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
-
+import { CartProvider } from "./context/CartContext";
 
 export const metadata = {
   title: "EcomerceApp",
@@ -14,10 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="font-poppins antialiased">
-
-      <Header />
-        {children}
-      <Footer />
+        <CartProvider>
+          <Header />
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
